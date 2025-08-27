@@ -20,9 +20,9 @@ function showNovelChapters(novelId) {
         ];
     } else if (novelId === 'anotherworld') {
         chapters = [
-            { title: 'Chapter 1', path: 'novel/Novel/AnotherSide/chapter1.md' },
-            { title: 'Chapter 2', path: 'novel/Novel/AnotherSide/chapter2.md' },
-            { title: 'Chapter 3', path: 'novel/Novel/AnotherSide/chapter3.md' }
+            { title: 'Chapter 1', path: 'novel/Novel/AnotherSide/chapterAS1.md' },
+            { title: 'Chapter 2', path: 'novel/Novel/AnotherSide/chapterAS2.md' },
+            { title: 'Chapter 3', path: 'novel/Novel/AnotherSide/chapterAS3.md' }
         ];
     }
 
