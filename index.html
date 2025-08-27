@@ -115,9 +115,7 @@
             contentArea.style.display = 'block';
             
             try {
-                console.log(`Fetching content from: ${filePath}`); // Log the file path being fetched
                 const response = await fetch(filePath);
-                console.log(`Response status: ${response.status}`); // Log the response status
                 if (!response.ok) {
                     throw new Error('File not found');
                 }
@@ -190,7 +188,7 @@
             <p>Discover my novel projects and stories.</p>
             
             <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px; justify-content: center;">
-                <button onclick="loadNovelContent('anotherworld', 'novel/Novel/AnotherSide/chapter1.md');" style="padding: 15px 30px; font-size: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                <button onclick="loadNovelContent('anotherworld', 'novel/Novel/AnotherSide/chapterAS1.md');" style="padding: 15px 30px; font-size: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                     Another World
                 </button>
                 
