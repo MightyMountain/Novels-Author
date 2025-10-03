@@ -1,0 +1,199 @@
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 30px 20px;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    animation: hide;
+}
+
+.novel-card {
+  background: #333;
+  border-radius: 10px;
+  padding: 20px 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.novel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background-color: #555;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.novel-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Reader View */
+.reader {
+  display: none;
+  position: relative;
+}
+
+.reader.active {
+  display: block;
+}
+
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 30px solid #ccc;
+  border-right: 5px solid #ccc;
+  box-sizing: border-box;
+}
+
+.chapter-content {
+  line-height: 1.6;
+}
+
+.chapter-content p {
+  margin-bottom: 0.5em;
+}
+
+.chapter-content h1,
+.chapter-content h2,
+.chapter-content h3,
+.chapter-content blockquote {
+  margin-bottom: 0.5em;
+}
+
+/* Font control buttons */
+.font-controls {
+  margin: 10px 0;
+  text-align: right;
+}
+
+.font-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.font-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Main container for boundaries */
+.main-container {
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: margin-left 0.3s;
+}
+
+.sidebar.active ~ .main-container {
+  margin-left: 300px;
+}
+
+/* Sliding Menu */
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #f0f0f0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transition: left 0.3s;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list button {
+  padding: 10px 0;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.chapter-list button:hover {
+  background: #f9f9f9;
+}
+
+.back-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.reader-back-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
