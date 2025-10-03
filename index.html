@@ -159,6 +159,9 @@
     document.addEventListener('click', (e) => {
       if (!sidebar.contains(e.target) && e.target !== menuBtn) {
         sidebar.classList.remove('active');
+        if (window.innerWidth <= 768 && currentNovel) {
+          menuBtn.style.display = 'block';
+        }
         sidebarShownByHover = false;
         sidebarShownBySwipe = false;
       }
@@ -168,8 +171,11 @@
     document.addEventListener('touchstart', (e) => {
       if (!sidebar.contains(e.target) && e.target !== menuBtn) {
         sidebar.classList.remove('active');
+        if (window.innerWidth <= 768 && currentNovel) {
+          menuBtn.style.display = 'block';
+        }
         sidebarShownByHover = false;
-        sidebarShownBySwipe = false;
+        sidebarShownBySwipe = true;
       }
     });
 
@@ -211,7 +217,7 @@
       if (currentNovel && Math.abs(deltaX) > Math.abs(deltaY) && deltaX > 100 && touchStartX < 50 && !sidebar.classList.contains('active')) {
         sidebar.classList.add('active');
         sidebarShownBySwipe = true;
-        if (window.innerWidth > 768) menuBtn.style.display = 'none';
+        menuBtn.style.display = 'none';
       }
     });
 
@@ -246,7 +252,7 @@
         chapterList.appendChild(button);
       });
       sidebar.classList.add('active');
-      if (window.innerWidth > 768) menuBtn.style.display = 'none';
+      menuBtn.style.display = 'none';
       novelGallery.style.display = 'none';
       reader.classList.add('active');
       readerBackBtn.style.display = 'block';
@@ -274,7 +280,7 @@
         });
       // Keep sidebar open for easier chapter switching
       sidebar.classList.add('active');
-      if (window.innerWidth > 768) menuBtn.style.display = 'none';
+      menuBtn.style.display = 'none';
       sidebarShownByHover = false;
       sidebarShownBySwipe = false;
     }
@@ -321,7 +327,7 @@
     // Toggle sidebar menu
     menuBtn.onclick = () => {
       sidebar.classList.toggle('active');
-      if (sidebar.classList.contains('active') && window.innerWidth > 768) {
+      if (sidebar.classList.contains('active')) {
         menuBtn.style.display = 'none';
       }
       sidebarShownByHover = false;
