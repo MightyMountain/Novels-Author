@@ -134,7 +134,7 @@ footer {
   color: rgb(0, 0, 0);
   border: none;
   padding: 10px;
-  cursor: pointer;
+  cursor: swipe;
   z-index: 1000;
 }
 
@@ -245,10 +245,13 @@ footer {
   }
 
   .menu-btn {
-    position: fixed;
-    top: 70px;
-    left: 10px;
-    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: click;
+    margin-bottom: 20px;
+  }
   }
 }
 
@@ -289,8 +292,12 @@ footer {
     font-size: 24px;
   }
   .menu-btn {
-    top: 40px;
-    left: 10px;
-    padding: 10px;
+   background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: click;
+    margin-bottom: 20px;
   }
 }
+
