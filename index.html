@@ -260,13 +260,14 @@
         .then(response => response.text())
         .then(md => {
           chapterContent.innerHTML = markdownToHTML(md);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         })
         .catch(error => {
           chapterContent.innerHTML = '<p>Error loading chapter.</p>';
         });
-      // Keep sidebar open for easier chapter switching
-      sidebar.classList.add('active');
-      menuBtn.style.display = 'none';
+      // Hide sidebar when switching chapters
+      sidebar.classList.remove('active');
+      menuBtn.style.display = 'block';
       sidebarShownByHover = false;
       sidebarShownBySwipe = false;
     }
