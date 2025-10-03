@@ -207,68 +207,6 @@
       }
     });
 
-    let startX = 0;
-    let startY = 0;
-    let endX = 0;
-    let endY = 0;
-    let isDown = false;
-
-    // ----- Mobile: Touch Events -----
-    document.addEventListener("touchstart", (e) => {
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-    });
-
-    document.addEventListener("touchmove", (e) => {
-      endX = e.touches[0].clientX;
-      endY = e.touches[0].clientY;
-    });
-
-    document.addEventListener("touchend", () => {
-      handleSwipe();
-    });
-
-    // ----- Desktop: Mouse Events -----
-    document.addEventListener("mousedown", (e) => {
-      isDown = true;
-      startX = e.clientX;
-      startY = e.clientY;
-    });
-
-    document.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      endX = e.clientX;
-      endY = e.clientY;
-    });
-
-    document.addEventListener("mouseup", () => {
-      isDown = false;
-      handleSwipe();
-    });
-
-    // ----- Fungsi Deteksi Arah Swipe -----
-    function handleSwipe() {
-      const diffX = endX - startX;
-      const diffY = endY - startY;
-
-      // Hanya respons jika pergeseran cukup jauh (misal > 50px)
-      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-        if (diffX > 0) {
-          console.log("👉 Swipe Kanan");
-          // Aksi: buka drawer
-        } else {
-          console.log("👈 Swipe Kiri");
-          // Aksi: tutup drawer
-        }
-      } else if (Math.abs(diffY) > 50) {
-        if (diffY > 0) {
-          console.log("👇 Swipe Bawah");
-        } else {
-          console.log("👆 Swipe Atas");
-        }
-      }
-    }
-
     // Render novel gallery
     function renderGallery() {
       novelGallery.innerHTML = '';
