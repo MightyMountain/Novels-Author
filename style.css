@@ -220,7 +220,7 @@ footer {
 
   .sidebar {
     width: 30%;
-    left: -100%;
+    left: -300%;
   }
 
   .sidebar.active {
@@ -273,3 +273,4 @@ footer {
     font-size: 24px;
   }
 }
+
