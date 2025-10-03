@@ -134,7 +134,7 @@ footer {
   color: rgb(0, 0, 0);
   border: none;
   padding: 10px;
-  cursor: pointer;
+  cursor: swipe;
   z-index: 1000;
 }
 
@@ -198,7 +198,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px;
@@ -245,9 +245,12 @@ footer {
   }
 
   .menu-btn {
-    top: 70px;
-    left: 610px;
-    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: click;
+    margin-bottom: 20px;
   }
 }
 
@@ -288,8 +291,11 @@ footer {
     font-size: 24px;
   }
   .menu-btn {
-    top: 40px;
-    left:420px;
-    padding: 10px;
+   background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: click;
+    margin-bottom: 20px;
   }
 }
