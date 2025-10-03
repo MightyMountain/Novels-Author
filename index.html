@@ -159,7 +159,21 @@
     document.addEventListener('click', (e) => {
       if (!sidebar.contains(e.target) && e.target !== menuBtn) {
         sidebar.classList.remove('active');
-        menuBtn.style.display = 'block';
+        if (window.innerWidth <= 768 && currentNovel) {
+          menuBtn.style.display = 'block';
+        }
+        sidebarShownByHover = false;
+        sidebarShownBySwipe = false;
+      }
+    });
+
+    // Also for touch
+    document.addEventListener('touchstart', (e) => {
+      if (!sidebar.contains(e.target) && e.target !== menuBtn) {
+        sidebar.classList.remove('active');
+        if (window.innerWidth <= 768 && currentNovel) {
+          menuBtn.style.display = 'block';
+        }
         sidebarShownByHover = false;
         sidebarShownBySwipe = false;
       }
