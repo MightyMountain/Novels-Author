@@ -198,7 +198,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px;
@@ -245,8 +245,9 @@ footer {
   }
 
   .menu-btn {
+    position: fixed;
     top: 70px;
-    left: 610px;
+    left: 10px;
     padding: 10px;
   }
 }
@@ -289,8 +290,7 @@ footer {
   }
   .menu-btn {
     top: 40px;
-    left:420px;
+    left: 10px;
     padding: 10px;
   }
 }
-
