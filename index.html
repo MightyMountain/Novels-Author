@@ -1,248 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>REMIRAINDA official web</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Blog</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        h1, h2 {
-            color: #444;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #333;
-            color: #fff;
-        }
-        .form-container {
-            margin-top: 20px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input, textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #444;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #555;
-        }
-        .login {
-            text-align: right;
-            margin-top: 10px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.add('hidden');
-            });
-            document.getElementById(sectionId).classList.remove('hidden');
-            
-            // Clear content areas when switching sections
-            document.querySelectorAll('.novel-content').forEach(content => {
-                content.innerHTML = '';
-                content.style.display = 'none';
-            });
-
-            // Hide sidebar when switching away from novel section
-            const sidebar = document.getElementById('sidebar');
-            if (sectionId !== 'novel') {
-                sidebar.style.display = 'none';
-            }
-        }
-
-        async function loadNovelContent(novelId, filePath) {
-            // Hide all content areas first
-            document.querySelectorAll('.novel-content').forEach(content => {
-                content.style.display = 'none';
-            });
-            
-            const contentArea = document.getElementById(`${novelId}-content`);
-            contentArea.style.display = 'block';
-            
-            try {
-                const response = await fetch(filePath);
-                if (!response.ok) {
-                    throw new Error('File not found');
-                }
-                const content = await response.text();
-                
-                // Convert markdown to HTML (simple conversion)
-                const htmlContent = content
-                    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-                    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-                    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-                    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')
-                    .replace(/\n/g, '<br>');
-                
-                contentArea.innerHTML = `
-                    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px;">
-                        ${htmlContent}
-                    </div>
-                `;
-            } catch (error) {
-                contentArea.innerHTML = `
-                    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px; color: #d32f2f;">
-                        <p>Error loading content: ${error.message}</p>
-                    </div>
-                `;
-            }
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Author Novel</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<main>
 <body>
-    <header>
-        <h1>Welcome to REMIRAINDA Personal Blog</h1>
-    </header>
+  <header>
+        <h1>AUTHOR NOVEL</h1>
+  </header>
 
-    <nav>
-        <a href="#" onclick="showSection('Blog')">Blog</a>
-        <a href="#" onclick="showSection('novel')">Novel</a>
-        <!--<a href="#" onclick="showSection('lyrics')">Lyrics</a>-->
-        <a href="#" onclick="showSection('ShortStory')">Short Story</a>
-        <a href="#" onclick="showSection('gallery')">Gallery</a>
-        <a href="#" onclick="showSection('contact')">About</a>
-    </nav>
+  <button class="menu-btn" id="menuBtn">☰</button>
 
-    <div id="sidebar" style="width: 200px; position: fixed; top: 100px; left: 0; background: #fff; box-shadow: 2px 0 5px rgba(0,0,0,0.1); padding: 10px; z-index: 1000; display: none;">
-        <h3>Novels</h3>
-        <button onclick="showNovelChapters('anotherworld')">Another World</button>
-        <button onclick="showNovelChapters('villain')">Villain</button>
-        <button onclick="showNovelChapters('arita')">Arita</button>
-        <h4>Chapters</h4>
-        <ul id="chapter-list">
-            <!-- Chapters will be loaded here dynamically -->
-        </ul>
-    </div>
+  <div class="sidebar" id="sidebar">
+    <button class="back-btn" id="backBtn">← Back to Novels</button>
+    <h2 id="novelTitle">Chapters</h2>
+    <div class="chapter-list" id="chapterList"></div>
+  </div>
 
-    <main style="margin-left: 220px;">
-        <section id="Blog">
-            <h2>Blog</h2>
-            <main>
-                <p>Here you can find my latest Blog posts.</p>
-            </main>
-            <main>
-                <p>Another blog</p>
-            </main>
-            <!-- Add Blog entries here -->
-        </section>
+  <div class="main-container">
+    <div class="gallery" id="novelGallery"></div>
 
-        <section id="novel" class="hidden">
-            <h2>Novel</h2>
-            <p>Discover my novel projects and stories.</p>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px; justify-content: center;">
-                <button onclick="loadNovelContent('anotherworld', 'novel/Novel/AnotherSide/chapterAS1.md');" style="padding: 15px 30px; font-size: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    Another World
-                </button>
-                
-                <button onclick="loadNovelContent('villain', 'novel/Novel/Villain/index.md');" style="padding: 15px 30px; font-size: 18px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    Villain
-                </button>
-                
-                <button onclick="loadNovelContent('arita', 'novel/Novel/Arita/arita1.md');" style="padding: 15px 30px; font-size: 18px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    Arita
-                </button>
-            </div>
-            
-            <!-- Content display areas for each novel -->
-            <div id="anotherworld-content" class="novel-content" style="display: none;"></div>
-            <div id="villain-content" class="novel-content" style="display: none;"></div>
-            <div id="arita-content" class="novel-content" style="display: none;"></div>
-            
-            <style>
-                button:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-                }
-            </style>
-        </section>
-
-        <!--<section id="lyrics" class="hidden">
-            <h2>Lyrics</h2>
-            <p>Explore my collection of lyrics and song inspirations.</p>
-            Add lyrics content here 
-        </section>-->
-
-        <section id="ShortStory" class="hidden">
-            <h2>Short Story</h2>
-            <p>Read my short stories and creative writings.</p>
-            <!-- Add short story content here -->
-
-        <section id="gallery" class="hidden">
-            <h2>Gallery</h2>
-            <p>A showcase of my favorite photos and moments.</p>
-            <!-- Add gallery content here -->
-        </section>
-
-        <section id="contact" class="hidden">
-            <h2>About Me</h2>
-            
-        </section>
-
-        <div class="login">
-            <a href="#"></a>
+    <div class="reader" id="reader">
+      <div class="content">
+        <button class="reader-back-btn" id="readerBackBtn">← Back to Novels</button>
+        <h2 id="readerNovelTitle"></h2>
+        <h3 id="readerChapterTitle" class="content-chapter-title"></h3>
+        <div class="chapter-nav">
+          <button id="prevChapterBtn" class="nav-btn">← Previous</button>
+          <button id="nextChapterBtn" class="nav-btn">Next →</button>
         </div>
-    </main>
+        <div class="font-controls">
+          <button id="decreaseFont" class="font-btn">A-</button>
+          <button id="increaseFont" class="font-btn">A+</button>
+        </div>
+        <div class="chapter-content" id="chapterContent"></div>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <p>&copy; 2024 My Personal Blog. All rights reserved.</p>
-    </footer>
+  <script>
+    // Sample novels data with chapter files
+    const novels = [
+      {
+        id: 1,
+        title: "Another Side",
+        chapters: [
+          {
+            title: "Chapter 1: Sepotong Roti",
+            file: "novels/anotherside_chapter1.md"
+          },
+          {
+            title: "Chapter 2: Tempat Kerja",
+            file: "novels/anotherside_chapter2.md"
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "VILLAIN",
+        chapters: [
+          {
+            title: "Chapter 1: Arrival",
+            file: "novels/villain_chapter1.md"
+          },
+          {
+            title: "Chapter 2: Discovery",
+            file: "novels/villain_chapter2.md"
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "Hunted by Death",
+        chapters: [
+          {
+            title: "Chapter 1: The Chase Begins",
+            file: "novels/novel3_chapter1.md"
+          },
+          {
+            title: "Chapter 2: Shadows of the Past",
+            file: "novels/novel3_chapter2.md"
+          }
+        ]
+      }
+    ];
+
+    // Improved markdown to HTML converter for basic markdown used here
+    function markdownToHTML(md) {
+      const blocks = md.split(/\n\s*\n/);
+      let html = '';
+
+      blocks.forEach(block => {
+        block = block.trim();
+        if (block === '') return;
+
+        if (block.match(/^#{1,3} /) || block.match(/^\> /)) {
+          // heading or blockquote, process as is
+          const lines = block.split('\n');
+          lines.forEach(line => {
+            let converted = line
+              .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+              .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+              .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+              .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+              .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+              .replace(/\*(.*)\*/gim, '<em>$1</em>');
+            html += converted + '<br />';
+          });
+        } else {
+          // paragraph or list
+          const lines = block.split('\n');
+          let paraHtml = '';
+          let inList = false;
+          lines.forEach(line => {
+            if (/^\- /.test(line)) {
+              if (!inList) {
+                paraHtml += '<ul>';
+                inList = true;
+              }
+              paraHtml += '<li>' + line.replace(/^\- /, '') + '</li>';
+            } else {
+              if (inList) {
+                paraHtml += '</ul>';
+                inList = false;
+              }
+              let converted = line
+                .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+                .replace(/\*(.*)\*/gim, '<em>$1</em>');
+              paraHtml += converted + ' ';
+            }
+          });
+          if (inList) {
+            paraHtml += '</ul>';
+          }
+          html += '<p>' + paraHtml.trim() + '</p>';
+        }
+      });
+
+      return html.trim();
+    }
+
+    const novelGallery = document.getElementById('novelGallery');
+    const sidebar = document.getElementById('sidebar');
+    const menuBtn = document.getElementById('menuBtn');
+    const backBtn = document.getElementById('backBtn');
+    const chapterList = document.getElementById('chapterList');
+    const reader = document.getElementById('reader');
+    const readerNovelTitle = document.getElementById('readerNovelTitle');
+    const readerChapterTitle = document.getElementById('readerChapterTitle');
+    const chapterContent = document.getElementById('chapterContent');
+    const novelTitle = document.getElementById('novelTitle');
+    const readerBackBtn = document.getElementById('readerBackBtn');
+
+    // Hide sidebar when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && e.target !== menuBtn) {
+        sidebar.classList.remove('active');
+        menuBtn.style.display = 'block';
+        sidebarShownByHover = false;
+        sidebarShownBySwipe = false;
+      }
+    });
+
+    // Show sidebar on hover left edge (desktop)
+    document.addEventListener('mousemove', (e) => {
+      if (currentNovel) {
+        if (e.clientX < 60 && !sidebar.classList.contains('active')) {
+          sidebar.classList.add('active');
+          sidebarShownByHover = true;
+          menuBtn.style.display = 'none';
+        } else if (e.clientX >= 60 && sidebarShownByHover && !sidebar.contains(e.target)) {
+          sidebar.classList.remove('active');
+          sidebarShownByHover = false;
+          menuBtn.style.display = 'block';
+        }
+      }
+    });
+
+    // Hide sidebar on mouse leave (desktop) only if not in a novel
+    sidebar.addEventListener('mouseleave', () => {
+      if (sidebarShownByHover && !currentNovel) {
+        sidebar.classList.remove('active');
+        sidebarShownByHover = false;
+        menuBtn.style.display = 'block';
+      }
+    });
+
+    // Touch events for swipe right (mobile)
+    document.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+      if (currentNovel && Math.abs(deltaX) > Math.abs(deltaY) && deltaX > 100 && touchStartX < 50 && !sidebar.classList.contains('active')) {
+        sidebar.classList.add('active');
+        sidebarShownBySwipe = true;
+        menuBtn.style.display = 'none';
+      }
+    });
+
+    // Render novel gallery
+    function renderGallery() {
+      novelGallery.innerHTML = '';
+      novels.forEach(novel => {
+        const card = document.createElement('div');
+        card.className = 'novel-card';
+        card.textContent = novel.title;
+        card.onclick = () => openNovel(novel);
+        novelGallery.appendChild(card);
+      });
+      reader.classList.remove('active');
+      novelGallery.style.display = 'grid';
+      menuBtn.style.display = 'none';
+      sidebar.classList.remove('active');
+      readerBackBtn.style.display = 'none';
+      sidebarShownByHover = false;
+      sidebarShownBySwipe = false;
+    }
+
+    // Open novel and show chapters in sidebar
+    function openNovel(novel) {
+      currentNovel = novel;
+      novelTitle.textContent = novel.title;
+      chapterList.innerHTML = '';
+      novel.chapters.forEach((chapter, index) => {
+        const button = document.createElement('button');
+        button.textContent = chapter.title;
+        button.onclick = () => openChapter(index);
+        chapterList.appendChild(button);
+      });
+      sidebar.classList.add('active');
+      menuBtn.style.display = 'none';
+      novelGallery.style.display = 'none';
+      reader.classList.add('active');
+      readerBackBtn.style.display = 'block';
+      // Open first chapter by default
+      openChapter(0);
+      sidebarShownByHover = false;
+      sidebarShownBySwipe = false;
+    }
+
+    // Open chapter and render content
+    function openChapter(index) {
+      if (!currentNovel) return;
+      if (index < 0 || index >= currentNovel.chapters.length) return;
+      const chapter = currentNovel.chapters[index];
+      currentChapterIndex = index;
+      readerNovelTitle.textContent = currentNovel.title;
+      readerChapterTitle.textContent = chapter.title;
+      fetch(chapter.file)
+        .then(response => response.text())
+        .then(md => {
+          chapterContent.innerHTML = markdownToHTML(md);
+        })
+        .catch(error => {
+          chapterContent.innerHTML = '<p>Error loading chapter.</p>';
+        });
+      // Keep sidebar open for easier chapter switching
+      sidebar.classList.add('active');
+      menuBtn.style.display = 'none';
+      sidebarShownByHover = false;
+      sidebarShownBySwipe = false;
+    }
+
+    // Back to novel gallery
+    backBtn.onclick = () => {
+      currentNovel = null;
+      renderGallery();
+      menuBtn.style.display = 'none';
+      readerBackBtn.style.display = 'none';
+      sidebarShownByHover = false;
+      sidebarShownBySwipe = false;
+    };
+
+    // Reader back button
+    readerBackBtn.onclick = () => {
+      currentNovel = null;
+      renderGallery();
+      sidebarShownByHover = false;
+      sidebarShownBySwipe = false;
+    };
+
+    // Track current chapter index for navigation
+    let currentChapterIndex = 0;
+
+    // Previous and Next chapter buttons
+    const prevChapterBtn = document.getElementById('prevChapterBtn');
+    const nextChapterBtn = document.getElementById('nextChapterBtn');
+
+    prevChapterBtn.addEventListener('click', () => {
+      if (!currentNovel) return;
+      if (currentChapterIndex > 0) {
+        openChapter(currentChapterIndex - 1);
+      }
+    });
+
+    nextChapterBtn.addEventListener('click', () => {
+      if (!currentNovel) return;
+      if (currentChapterIndex < currentNovel.chapters.length - 1) {
+        openChapter(currentChapterIndex + 1);
+      }
+    });
+
+    // Toggle sidebar menu
+    menuBtn.onclick = () => {
+      sidebar.classList.toggle('active');
+      if (sidebar.classList.contains('active')) {
+        menuBtn.style.display = 'none';
+      }
+      sidebarShownByHover = false;
+      sidebarShownBySwipe = false;
+    };
+
+    // Initial render
+    renderGallery();
+
+    // Font size control logic
+    const decreaseFontBtn = document.getElementById('decreaseFont');
+    const increaseFontBtn = document.getElementById('increaseFont');
+    let currentFontSize = 16; // default font size in px
+
+    function updateFontSize() {
+      const paragraphs = chapterContent.querySelectorAll('p');
+      paragraphs.forEach(p => {
+        p.style.fontSize = currentFontSize + 'px';
+      });
+    }
+
+    decreaseFontBtn.addEventListener('click', () => {
+      if (currentFontSize > 10) { // minimum font size
+        currentFontSize -= 2;
+        updateFontSize();
+      }
+    });
+
+    increaseFontBtn.addEventListener('click', () => {
+      if (currentFontSize < 36) { // maximum font size
+        currentFontSize += 2;
+        updateFontSize();
+      }
+    });
+
+    // Update font size after loading chapter content
+    const originalOpenChapter = openChapter;
+    openChapter = function(index) {
+      originalOpenChapter(index);
+      // Delay update to ensure content is loaded
+      setTimeout(() => {
+        updateFontSize();
+      }, 100);
+    };
+  </script>
 </body>
+</main>
+
+<footer>
+        <p>&copy; 2025 Author Kejam Blog. All rights reserved.</p>
+        <!--<div id="visitor-count" style="position: absolute; left: 10px; bottom: 1px">Visitors: </div>-->
+    </footer>
+
 </html>
