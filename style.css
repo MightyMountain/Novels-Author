@@ -215,28 +215,8 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 18px;
-    padding: 20px 15px;
-  }
 
-  .novel-card {
-    padding: 18px 12px;
-    font-size: 19px;
-    min-height: 100px;
-  }
-
-  .content {
-    padding: 18px;
-    max-width: none;
-    border-left: 5px solid #ccc;
-    border-right: 2px solid #ccc;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px;
