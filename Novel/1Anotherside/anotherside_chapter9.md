@@ -1,5 +1,3 @@
-## Chapter 9: Renata Kecil
-
 Keesokan paginya, aku terbangun dengan kepala yang sedikit pening. Air mataku mengalir, membuatku bingung. Aku masih teringat dengan gadis itu, luka ini masih terbuka.
 
 Cahaya matahari yang masuk melalui celah jendela membuatku menyipitkan mata. Aku mengedarkan pandangan ke sekeliling kamar, ruangan yang dulu menjadi tempat tidurku bertahun-tahun lalu. Rasanya asing tapi juga familiar pada saat yang bersamaan.
@@ -205,4 +203,5 @@ Renata menatap jari kelingkingku sejenak sebelum akhirnya mengaitkan jarinya pad
 Aku tertawa kecil. "Iya, aku bakal usahakan."
 
 Setelah menenangkan Renata, aku akhirnya berangkat kerja. Namun, sepanjang perjalanan, aku masih bisa merasakan genggaman kecilnya yang erat. Untuk pertama kalinya setelah sekian lama, ada seseorang yang benar-benar mengharapkanku kembali.
+
 
