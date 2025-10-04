@@ -129,7 +129,7 @@ footer {
 .menu-btn {
   position: fixed;
   top: 10px;
-  left: 10px;
+  left: -100px;
   background: #e6e5e5;
   color: rgb(0, 0, 0);
   border: none;
@@ -299,3 +299,4 @@ footer {
     margin-bottom: 20px;
   }
 }
+
