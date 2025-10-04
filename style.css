@@ -252,6 +252,7 @@ footer {
     }
 
   .novel-card {
+    margin-top: 15px;
     padding: 18px 12px;
     font-size: 18px;
     min-height: 50px;
@@ -320,6 +321,7 @@ footer {
   }
 
   .novel-card {
+    margin-top: 10px;
     padding: 10px 5px;
     font-size: 16px;
     min-height: 80px;
@@ -357,4 +359,5 @@ footer {
     margin-bottom: 20px;
   }
 }
+
 
