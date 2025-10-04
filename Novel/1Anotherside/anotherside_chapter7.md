@@ -1,5 +1,3 @@
-## Chapter 7: Balas Dendam
-
 **BALAS DENDAM**
 
 Aku berjalan di lorong rumah sakit yang sepi. Cahaya lampu putih menyinari lantai dengan kilau dingin yang memantul dari ubin yang licin. Di tanganku, sebuah kantong plastik berisi obat yang diberikan perawat tadi, tapi aku tahu, tidak ada obat yang bisa menyembuhkan ini.
@@ -211,4 +209,5 @@ Keadilan telah kutegakkan dengan tanganku sendiri.
 Meskipun aku sudah melakukannya. Aku tau dia tak akan kembali. 
 
 > "Dia tak akan kembali"
+
 
