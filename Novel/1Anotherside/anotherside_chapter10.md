@@ -1,5 +1,3 @@
-## Chapter 10: Sahabatku
-
 Aku sangat menyukai senyuman itu. Meski aku tak bisa sering melihatnya. Tapi, aku sangat menyukai senyuman gadis itu. Sekali saja, tolong satu kesempatan saja.
 
 *---------------*
@@ -184,4 +182,5 @@ Tingginya sekitar 176 cm, dengan berat 73 kg. Dia sedikit lebih pendek dan lebih
 Angga Rehan Bantara, namanya saja sudah seperti bos trakhir di game. Memiliki tinggi 181 cm, dan berat bada sekitar 78 kg. Aku memanggilnya Yang Mulia Bos Paduka.
 
 Awalnya dia marah ketika aku memanggilnya begitu, tapi lama kelamaan dia menerimanya. Dan teman yang lain juga memanggilnya dengan sebutan itu karena sudah terbiasa.
+
 
