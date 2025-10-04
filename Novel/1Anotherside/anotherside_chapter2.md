@@ -1,5 +1,3 @@
-## Chapter 2: Tempat Kerja
-
 Aku segera bergegas pulang untuk melanjutkan merapihkan barang-barangku. Namun, saat sampai di rumah, sesuatu terlintas dikepalaku.
 
 "Aduh, aku lupa beli sabun lagi!" seruku sambil menepuk dahi. Aku melirik ke arah kamar mandi dengan ekspresi malas.
@@ -371,4 +369,5 @@ Dan untuk hari ini, hanya sampai disini pertemuan kami. Aku berharap semoga beso
 Aku pulang dengan perasaan bercampur dengan khawatir tentang mereka. Tapi aku akan memastikan mereka bisa makan 3 kali sehari mulai sekarang, pikirku.
 
 *2019-06-18*
+
 
