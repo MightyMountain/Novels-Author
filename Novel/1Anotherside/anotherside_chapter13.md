@@ -1,5 +1,3 @@
-## Chapter 13: Ingatan yang Salah
-
 Aku tidak begitu mengingat kejadian waktu itu.
 
 Sudah lama aku berusaha mencoba mengingatnya, tapi semakin keras aku mencoba, semakin kabur semua itu. Seperti pasir yang terlepas dari genggaman, perlahan-lahan menghilang tanpa jejak.
@@ -293,4 +291,5 @@ Dan aku bertanya-tanya...
 Jika suatu hari aku mengingat semuanya, apakah rasa sakit ini akan hilang?
 
 Atau justru semakin dalam?
+
 
