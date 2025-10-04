@@ -1,5 +1,3 @@
-## Chapter 8: Masa Laluku
-
 Aku kembali ke tempat si Adik dalam keadaan penuh luka dan berlumuran darah. Aku terhuyung selama perjalanan. Aku memaksa kakiku yang lemas terus berjalan.
 
 Aku berharap hujan turun, sekarang.
@@ -327,4 +325,5 @@ Aku terkejut, tak menyangka tapi... anehnya merasa senang. Kejadian itu berlangs
 Bunda tersenyum lembut. "Tidurlah, Ram. Besok kita bicara lagi."
 
 Setelah pintu tertutup, aku menghela napas panjang dan menatap langit-langit kamar. Untuk pertama kalinya setelah sekian lama, aku merasa... pulang.
+
 
