@@ -1,5 +1,3 @@
-## Chapter 15: Aku & Deona
-
 Setelah Deona pulih, aku menemaninya selama beberapa hari ke depan. Orang tuanya memintaku untuk membantunya mengingat semua yang telah ia lupakan, termasuk mereka. Aku tahu ini bukan hal yang mudah bagi mereka, kehilangan ingatan Deona berarti kehilangan bagian penting dari kenangan yang pernah mereka bagikan. Tapi meski berat, mereka tetap berharap.
 
 Deona masih dirawat di rumah sakit yang sama untuk mengawasi perkembangan ingatannya. Prosesnya lambat, seperti memunguti pecahan kaca yang tersebar di lantai. Namun, semua orang mencoba sabar, termasuk aku.
@@ -269,3 +267,4 @@ Aku menatap langit yang semakin gelap, awan hitam menggantung rendah di cakrawal
 Bagaimana dengan diriku disisi sana? semoga dia tidak mengalami hal yang serupa.
 
 > Kapan penderitaan ini akan berakhir??,,
+
