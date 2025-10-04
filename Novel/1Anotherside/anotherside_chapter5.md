@@ -1,5 +1,3 @@
-## Chapter 5: Boneka Rusak
-
 **Akhirnya Pulang**
 
 Ahirnya, jam kerja usai. Kami semua pulang. Aku memilih berjalan kaki. malam itu angin berhembus lembut, membawa aroma hujan yang masih tersisa diudara. Lampu jalan menerangi trotoar dengan cahaya kekuningan yang tamaram, menciptakan bayangan panjang se sepanjang jalanku.
@@ -135,4 +133,5 @@ Aku membayangkan perlakuan bajingan itu terhadap gadis malang ini, dan itu membu
 Genggamanku mengerat. Hatiku dipenuhi oleh satu tekad yang tak tergoyahkan.
 
 "Aku bersumpah akan membalaskan dendam gadis ini"
+
 
