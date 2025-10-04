@@ -1,5 +1,3 @@
-## Chapter 11: Liburan
-
 Aku sangat menyukai senyuman itu. Selalu membuatmu ingin mempertahankannya untuk terus tersenyum.
 
 Aku tak bisa melihat senyuman gadis itu lagi.
@@ -371,4 +369,5 @@ Disisi lain, Reza sudah tertidur menahan mabuknya. Dia bersandar di sisi jendela
 Aku menghela napas ikut tersenyum, melihat mereka. Mungkin perjalanan ini akan mengalihkan pikiranku, setidaknya untuk sementara waktu.
 
 Sedangkan Deona dan Siska, tidur dibahu dan pahaku. Mereka... mau bagaimana lagi.
+
 
