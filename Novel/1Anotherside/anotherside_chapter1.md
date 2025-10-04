@@ -3,13 +3,11 @@
 
 > *"Oh...ingatan waktu itu, kah?"*
 
-Aku tak terlalu ingat kejadian waktu itu. Ingatanku mulai terkikis perlahan. Jadi, sebisa mungkin aku,..ingin sekali mengingat.
+Aku tak terlalu ingat kejadian waktu itu. Ingatanku mulai terkikis perlahan. Tapi, aku sudah berusaha,..aku, ingin sekali mengingatnya.
 
 Meskipun aku tak yakin, aku menulis cerita ini hanya berdasarkan ingatan samar yang terus terulang.
 
 *---------------*
-
-## Chapter 1: Sepotong Roti
 
 Aku menyukai senyuman itu. Penuh warna, seperti bunga yang bermekaran di tepian sungai.
 
@@ -170,5 +168,6 @@ Sementara itu, gadis itu hanya diam. Tatapannya mengikuti langkahku, tanpa kata,
 Aku tak tahu apa yang ada dipikirannya. Tapi sebelum benar-benar pergi, aku menoleh sekali lagi. Saat itulah aku melihatnya, sesuatu yang selama ini tersembunyi dibalik wajah datarnya.
 
 Bukan harapan. Bukan kebahagiaan. Melainkan sebuah ketakutan.
+
 
 Aku tak percaya meninggalkan mereka dalam keadaan seperti itu. Tapi mau bagaimana lagi, lagi pula aku akan kembali lagi, pasti.
