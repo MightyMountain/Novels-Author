@@ -1,5 +1,3 @@
-## Chapter 14: Another Stor
-
 **AWAL PERTEMUAN**
 
 Setelah lulus sekolah, aku memutuskan untuk bekerja bersama temanku, Angga. Meskipun usianya terpaut 15 tahun dariku, kami adalah sahabat baik. Angga adalah pemilik sebuah restoran, tempat yang akan menjadi awal perjalananku di dunia kerja.
@@ -451,4 +449,5 @@ Lalu, sebuah pikiran tiba-tiba melintas di benakku.
 Aku menggigit bibir, menahan diri untuk tidak tertawa sendiri.
 
 *"Aah, mmm, mungkin lain kali aja ya."*
+
 
