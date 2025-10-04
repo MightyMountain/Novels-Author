@@ -1,5 +1,3 @@
-## Chapter 12: Sesuatu yang tak Kuinginkan
-
 Perjalanan yang panjang mulai terasa membosankan dan sangat lama.
 
 Siska tertidur di sebelahku. Deona sudah terbangun dan sibuk dengan ponselnya.
@@ -421,4 +419,5 @@ Perlahan, pandanganku mulai kabur.
 Sebelum segalanya menjadi hitam, hanya satu pikiran yang terlintas di kepalaku.
 
 "Seandainya aku menunda kepulangan kami walau hanya sebentar saja...Ini semua pasti tidak akan terjadi."
+
 
