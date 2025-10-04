@@ -1,5 +1,3 @@
-## Chapter 6: Namamu?
-
 **RECOVERY - HEALING - CURE**
 
 Kepercayaannya padaku terlihat jelas saat ia berani berbicara. Aku tidak ingin mengecewakannya. Aku ingin melakukan sesuatu untuknya, sekecil apa pun itu.
@@ -266,4 +264,5 @@ Di sisiku, si adik masih menangis, memanggil kakaknya berkali-kali, seakan jika 
 Dan aku hanya bisa menyesali semuanya.
 
 Sialan.
+
 
