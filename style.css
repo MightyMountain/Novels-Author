@@ -245,6 +245,7 @@ footer {
     box-sizing: border-box;
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: 15px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -356,3 +357,4 @@ footer {
     margin-bottom: 20px;
   }
 }
+
