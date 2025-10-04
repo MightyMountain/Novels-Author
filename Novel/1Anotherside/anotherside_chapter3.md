@@ -1,5 +1,3 @@
-## Chapter 3: Tanggung Jawab
-
 **A NEW DAY**
 
 Cahaya samar mulai menyusup dari celah-celah jendela, mengisi kamar yang masih dilingkupi sisa-sisa kegelapan malam. Udara pagi yang dingin menyelinap melalui celah pintu, membuatku menggigil sesaat. Mataku terbuka perlahan, tapi meskipun tubuhku masih terasa berat, tidur kembali bukanlah pilihan.
@@ -249,4 +247,5 @@ Aku melakukan hal yang sama seperti yang dia lakukan pada si adik, aku melemparn
 Aku kembali teringat apa yang telah terjadi padaku. Kakak dari anak yang baru saja kujatuhkan, dulu dia selalu membuliku. Mereka memang tidak ada bedanya.
 
 Aku sempat melupakan semuanya, namun karena perbuatan anak ini "aku mengingat segalanya". Dan aku berpikir, ada baiknya aku melakukan hal ini juga padannya.
+
 
