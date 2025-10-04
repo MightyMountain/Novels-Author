@@ -1,5 +1,3 @@
-## Chapter 4: Candaan
-
 **MEMULAI HARI BARU**
 
 Aku bersiap berangkat bekerja. Hari ini terasa sama seperti hari-hari sebelumnya. Langit masih berwarna biru pucat dengan sisa-sisa warna jingga di ufuk timur. Udara pagi cukup sejuk, membuat embusan napas terasa ringan. Hiruk-pikuk kendaraan di kejauhan terdengar samar, bercampur dengan suara burung-burung yang berkicau riang di pepohonan pinggir jalan.
@@ -181,4 +179,5 @@ Saat sore tiba, hujan datang tanpa diundang. Membuat suasana yang tadinya hangat
 Aku menyukai hujan, tapi aku tak ingin terlibat kenangan bersamanya.
 
 Menangis dalam hujan? Aku tak pernah melakukannya.
+
 
